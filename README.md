@@ -4,6 +4,8 @@ Demo project for [grit](https://github.com/rtk-ai/grit) — **Git for AI agents*
 
 This repo contains a sample TypeScript project (5 files, 50 functions) and a demo script that runs **50 agents simultaneously** — first with raw git (chaos), then with grit (zero conflicts).
 
+![grit demo — 50 agents](demo.gif)
+
 ## Run the demo
 
 ```bash
