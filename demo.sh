@@ -118,7 +118,7 @@ MAIN=$(git branch --show-current)
 FUNCTIONS=()
 for f in src/*.ts; do
     while IFS= read -r line; do
-        func=$(echo "$line" | grep -oP '(?:export\s+)?(?:async\s+)?function\s+\K\w+')
+        func=$(echo "$line" | sed -n 's/.*function \([a-zA-Z_][a-zA-Z0-9_]*\).*/\1/p')
         if [[ -n "$func" ]]; then
             FUNCTIONS+=("$(basename $f)::$func")
         fi
